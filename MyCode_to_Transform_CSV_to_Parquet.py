@@ -11,7 +11,7 @@ glueContext = GlueContext(sc)
 spark = glueContext.spark_session
 job = Job(glueContext)
 job.init(args["JOB_NAME"], args)
-predicate_pushdown = "region in ('in','gb','fr')"
+predicate_pushdown = "region in ('in','fr')"
 # Script generated for node Data Catalog table
 DataCatalogtable_node1 = glueContext.create_dynamic_frame.from_catalog(
     database="de_youtube_raw_db",
